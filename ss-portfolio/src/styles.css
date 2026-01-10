@@ -106,6 +106,157 @@ body {
     background-color: #2980b9;
 }
 
+/* ===== Tech Stack (Icon Cards) ===== */
+.tech-stack {
+  padding: 4rem 0;
+}
+
+.tech-stack__header {
+  max-width: 900px;
+  margin: 0 auto 1.75rem;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tech-stack__header h2 {
+  font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.tech-stack__header p {
+  color: #556;
+  max-width: 760px;
+  margin: 0.5rem auto 0;
+}
+
+.tech-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.tech-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 40, 0.08);
+  border-radius: 16px;
+  padding: 16px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  /* Hover/animation setup */
+  transform: translateY(0);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+  box-shadow: 0 8px 22px rgba(10, 10, 20, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow accent */
+.tech-card::before {
+  content: "";
+  position: absolute;
+  inset: -80px -80px auto auto;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(76, 110, 245, 0.18), transparent 60%);
+  filter: blur(2px);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(76, 110, 245, 0.28);
+  box-shadow: 0 14px 34px rgba(10, 10, 20, 0.12);
+}
+
+.tech-card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Icon container */
+.tech-card__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 20, 40, 0.04);
+  border: 1px solid rgba(20, 20, 40, 0.06);
+  flex: 0 0 54px;
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.tech-card__icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Icon micro animation */
+.tech-card:hover .tech-card__icon {
+  transform: translateY(-1px) scale(1.04);
+  background: rgba(76, 110, 245, 0.08);
+  border-color: rgba(76, 110, 245, 0.18);
+}
+
+/* Text */
+.tech-card__body h3 {
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+  color: #1f2a37;
+}
+
+.tech-card__body p {
+  margin: 0;
+  color: #556;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* Footer line */
+.tech-stack__footer {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding: 0 20px;
+  text-align: center;
+  color: #556;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tech-card,
+  .tech-card::before,
+  .tech-card__icon {
+    transition: none !important;
+  }
+}
+
+
 /* Team Section */
 .team-section {
     padding: 80px 0;
