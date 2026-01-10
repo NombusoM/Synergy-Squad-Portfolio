@@ -22,6 +22,7 @@ body {
 .navbar {
     background-color: #2c3e50;
     color: white;
+    height: auto;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -36,8 +37,11 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+
     font-weight: bold;
+    color: white;
+    text-decoration: none;
+
 }
 
 .nav-links {
@@ -139,17 +143,7 @@ body {
   gap: 18px;
 }
 
-/* Responsive grid */
-@media (max-width: 992px) {
-  .tech-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Card */
 .tech-card {
@@ -245,15 +239,6 @@ body {
   padding: 0 20px;
   text-align: center;
   color: #556;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .tech-card,
-  .tech-card::before,
-  .tech-card__icon {
-    transition: none !important;
-  }
 }
 
 
@@ -479,6 +464,27 @@ footer {
     .team-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tech-card,
+  .tech-card::before,
+  .tech-card__icon {
+    transition: none !important;
+  }
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 }
