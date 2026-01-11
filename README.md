@@ -115,6 +115,22 @@ git push origin feature/your-feature-name
 
 ### Keeping Your Branch Updated
 ```bash
+# See what files have changed
+git status
+
+# See what branch your on -- VERY IMPORTANT TO CODE IN THE RIGHT BRANCH
+git branch
+
+# Stage all changes
+git add .
+
+# Or stage specific files
+git add Nombuso.html
+git add global.css
+
+# Commit all changes -- MAKE SURE YOU HAVE A COMMENT EACH TIME, MAKE IT DETAILED
+git commit -m "Fix profile page layout and styling"
+
 # Get latest changes from main
 git checkout main
 git pull origin main
