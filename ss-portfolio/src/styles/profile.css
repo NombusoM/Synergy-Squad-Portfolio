@@ -1,0 +1,194 @@
+/* Profile Page Styles */
+.profile-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.profile-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-header .role {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+.profile-content {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.02);
+}
+
+.profile-details h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.profile-details p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+
+.profile-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* Strengths Section */
+.Strengths-section {
+    margin-bottom: 4rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.Strengths-section h3 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.Strengths-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Strengths-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.15);
+}
+
+.Strengths-card h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: normal; /* Not bold */
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Experiences Section */
+.Experiences-section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.Experiences-section h3 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Experiences-grid {
+    display: flex;
+    flex-direction: column; /* Stack experiences vertically */
+    gap: 2rem;
+}
+
+.Experience-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid #764ba2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Experience-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(118, 75, 162, 0.15);
+}
+
+.Experience-card h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Experience-card p {
+    color: #555;
+    line-height: 1.7;
+    font-weight: normal; /* Not bold */
+    margin: 0;
+}
+
+/* Responsive Design for Profile Page */
+@media (max-width: 768px) {
+    .profile-info {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .profile-image img {
+        max-width: 250px;
+    }
+
+    .Strengths-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Strengths-section,
+    .Experiences-section {
+        padding: 2rem;
+    }
+
+    .profile-details h3,
+    .Strengths-section h3,
+    .Experiences-section h3 {
+        font-size: 1.5rem;
+    }
+}
