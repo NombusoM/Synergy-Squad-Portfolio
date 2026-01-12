@@ -135,9 +135,19 @@ git commit -m "Fix profile page layout and styling"
 git checkout main
 git pull origin main
 
-# Update your feature branch
+# Move to your feature branch
 git checkout feature/your-feature-name
-git merge main
+
+
+#Push to remote GitHub
+# Push to the branch you're currently on
+git push origin your-branch-name
+
+# Example: If you're on feature/nombuso-profile
+git push origin profiles/nombuso-profile
+
+# Or if you're on main
+git push origin main
 ```
 
 
